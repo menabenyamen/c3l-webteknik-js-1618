@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>
+    XHTML handbook
+  </title>
+</head>
+<body>
+  <div class="section" id="doctype">
+    <h2>Doctypes</h2>
+    <p>
+      Doctypes appear at the very top of the page. They tell the browser how the html on your page should be interpreted.
+    </p>
+    <div class="sub-section">
+      <h3>xhtml 1.1 doctype</h3>
+      <p>
+        xhtml 1.1 is a form of xml and the strictest doctype. Forcing xml rules on the document. The browser doesn't care though.
+      </p>
+      <code>
+        &lt;?xml version="1.0" encoding="utf-8"?&gt;<br/>
+        &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;<br/>
+        &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+      </code>
+    </div>
+    <div class="sub-section">
+      <h3>html5 doctype</h3>
+      <p>The html5 doctype allows code to be written far more loosely.</p>
+      <code>
+        &lt;!DOCTYPE html&gt;<br/>
+        &lt;html&gt;
+      </code>
+    </div>
+  </div>
+  <div class="section" id="block">
+    <h2>Block elements</h2>
+    <p>
+      Block elements provide the main structure of the page. They consume the entire width available to them.
+    </p>
+    <div class="sub-section element-description">
+      <h3>Headings</h3>
+      <p>We represent headings with the <code>&lt;h1&gt;</code> element. The number represents the headings importance. 1 is the most important and 6 the least.</p>
+      <table>
+        <tbody>
+          <tr>
+            <th>Code</th>
+            <th>Visualisation</th>
+          </tr>
+          <tr>
+            <td><code>&lt;h1&gt;Header 1&lt;/h1&gt;</code></td>
+            <td><h1>Header 1</h1></td>
+          </tr>
+          <tr>
+            <td><code>&lt;h2&gt;Header 2&lt;/h2&gt;</code></td>
+            <td><h2>Header 2</h2></td>
+          </tr>
+          <tr>
+            <td><code>&lt;h3&gt;Header 3&lt;/h3&gt;</code></td>
+            <td><h3>Header 3</h3></td>
+          </tr>
+          <tr>
+            <td><code>&lt;h4&gt;Header 4&lt;/h4&gt;</code></td>
+            <td><h4>Header 4</h4></td>
+          </tr>
+          <tr>
+            <td><code>&lt;h5&gt;Header 5&lt;/h5&gt;</code></td>
+            <td><h5>Header 5</h5></td>
+          </tr>
+          <tr>
+            <td><code>&lt;h6&gt;Header 6&lt;/h6&gt;</code></td>
+            <td><h6>Header 6</h6></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="sub-section element-description">
+      <h3>Divisions</h3>
+      <p>The div element is used for parts of the document that can't be semantically described by other html block elements. It is usually used in combination with a class or id attribute.</p>
+      <code>
+        &lt;div class="article"&gt;<br/>
+        &nbsp;&nbsp;&nbsp;Some very exciting news. <br/>
+        &lt;/div&gt;
+      </code>
+    </div>
+    <div class="sub-section element-description">
+      <h3>Paragraphs</h3>
+      <p>The paragraph element encloses paragraphs.</p>
+      <code>
+        &lt;p&gt;<br/>
+        &nbsp;&nbsp;&nbsp;The cat sat on the mat.<br/>
+        &lt;/p&gt;
+      </code>
+    </div>
+    <div class="sub-section element-description">
+      <h3>Tables</h3>
+      <p>A table in html contains 1 or more rows and 1 or more columns. In xhtml the rows should be inside a tbody element. Traditionally tables were used for formatting the page. They should not be used in this way. Tables should only be used where you want to represent tabular data.</p>
+      <table>
+        <tbody>
+          <tr>
+            <th>Code</th>
+            <th>Visualization</th>
+          </tr>
+          <tr>
+            <td>
+              <code>
+                &lt;table&gt;<br/>
+                &nbsp;&nbsp;&lt;tbody&gt;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Head col1&lt;/th&gt;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Head col2&lt;/th&gt;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;row2 col1&lt;/td&gt;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;row2 col2&lt;/td&gt;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;  <br/>
+                &nbsp;&nbsp;&lt;/tbody&gt;<br/>
+                &lt;/table&gt;
+              </code>
+            </td>
+            <td>
+              <table>
+                <tbody>
+                  <tr>
+                    <th>Head col1</th>
+                    <th>Head col2</th>
+                  </tr>
+                  <tr>
+                    <td>row2 col1</td>
+                    <td>row2 col2</td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="sub-section element-description">
+      <h3>Unordered Lists</h3>
+      <p>
+        A collection of data that has no specific order for example, facts, menu items, shopping items etc.
+      </p>
+      <ul class="facts">
+        <li>It's cold in Sweden in the winter</li>
+        <li>It rains in England in the winter</li>
+      </ul>
+
+    </div>
+    <div class="sub-section element-description">
+      <h3>Ordered Lists</h3>
+      <p>
+        A collection of data that has a specific order for example, tasks, rankings
+      </p>
+      <ol>
+        <li>Ferrari</li>
+        <li>Volvo</li>
+        <li>Ford</li>
+      </ol>
+    </div>
+  </div>
+  <div class="section" id="inline">
+    <h2>Inline elements</h2>
+    <p>
+      An inline element does not break the flow of the page.
+    </p>
+    <div class="sub-section element-description">
+      <h3>Span</h3>
+      <p>
+        The span element is the inline version of a div. It can be used to mark up data that can not be represented by other inline elements.
+      </p>
+      <p> Example: I read <span class="book">the art of computer programming</span> </p>
+    </div>
+    <div class="sub-section element-description">
+      <h3>Anchor (Link)</h3>
+      <p>
+        The anchor element is used for linking to other resources.
+      </p>
+      <p>An external link to <a href="https://google.se">google</a></p>
+      <p>An internal link to the <a href="#doctype">doctype section</a> on this page</p>
+    </div>
+    <div class="sub-section element-description">
+      <h3>Strong</h3>
+      <p>
+        The strong element is used for lifting out text that is important.
+      </p>
+      <p>For example <strong>this is important</strong></p>
+    </div>
+    <div class="sub-section element-description">
+      <h3>Emphasis</h3>
+      <p>
+        The emphasis element is used for lifting out text that is important. Slightly less important than strong.
+      </p>
+      <p>For example <em>this is quite important</em></p>
+    </div>
+    <div class="sub-section element-description">
+      <h3>Image</h3>
+      <p>
+        The image element is used add images in your page.
+      </p>
+      <p>For example here is an image <img src="http://www.catbreedslist.com/uploads/allimg/cat-pictures/Birman-1.jpg" alt="Fluffy cat"/></p>
+    </div>
+  </div>
+</body>
+</html>
