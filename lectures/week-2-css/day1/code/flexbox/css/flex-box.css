@@ -1,0 +1,15 @@
+html, body {
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+  background-color: pink;
+}
+
+.box {
+  background-color: honeydew;
+  padding: 10px 5px;
+  border: 1px lightblue solid;
+  margin: 10px 5px;
+}
