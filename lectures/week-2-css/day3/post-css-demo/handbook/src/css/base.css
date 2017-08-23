@@ -1,0 +1,80 @@
+@import 'variables/colors.css';
+@import 'variables/typography.css';
+
+body {
+  font-family: var(--font-family-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  padding: 20px;
+}
+
+h1,
+h2 {
+  color: var(--color-quartinery);
+  text-shadow: 2px 2px var(--color-neutral-50);
+}
+
+h1 {
+  background-color: var(--color-primary);
+}
+
+h2 {
+  background-color: var(--color-tertiary);
+  color: var(--color-neutral-60);
+}
+
+p {
+  padding: 5px 20px;
+}
+
+code {
+  color: var(--color-neutral-50);
+  font-size: 0.7em;
+  font-family: var(--font-family-monospace);
+}
+
+table {
+  margin: 20px;
+}
+
+th,
+td {
+  padding: 5px 20px;
+  border-bottom: 1px solid var(--color-neutral-20);
+}
+
+th {
+  background-color: var(--color-secondary);
+}
+
+tr:nth-child(even) {
+  background-color: var(--color-neutral-10);
+}
+
+ul,
+ol {
+  margin: 10px 35px;
+}
+
+ul li {
+  list-style-type: disc;
+}
+
+ol li {
+  list-style-type: lower-alpha;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}

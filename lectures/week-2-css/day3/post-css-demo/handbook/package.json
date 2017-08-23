@@ -1,0 +1,30 @@
+{
+  "name": "handbook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "process-images": "cp -r src/img dist/img",
+    "process-css": "postcss -o dist/css/master.css src/css/master.css",
+    "watch-process-css": "watch 'npm run process-css' src/css",
+    "process-html": "html-minifier --remove-comments --output-dir dist --input-dir src --file-ext html",
+    "watch-process-html": "watch 'npm run process-html' src/",
+    "css-lint": "node node_modules/stylelint/lib/cli.js 'src/css/**/*.css'",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run css-lint && npm run process-images && npm run process-css && npm run process-html",
+    "watch-all": "parallelshell 'npm run watch-process-css' 'npm run watch-process-html'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^3.10.0",
+    "html-minifier": "^3.5.3",
+    "parallelshell": "^3.0.1",
+    "postcss-cli": "^4.1.0",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-import": "^10.0.0",
+    "stylelint": "^8.0.0",
+    "stylelint-config-standard": "^17.0.0",
+    "watch": "^1.0.2"
+  }
+}
