@@ -1,4 +1,5 @@
-const socket = io.connect('http://172.26.32.245:8080');
+/* global io */
+const socket = io.connect('http://localhost:8080');
 
 const sendButton = document.querySelector('.send-button');
 const messageTxt = document.querySelector('.message-txt');
