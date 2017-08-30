@@ -14,9 +14,7 @@ const students = [
   }
 ];
 
-// Log the results to console with console.dir(studentsOver30);
-
-
+// Log the results to console 
 // Create an array called studentsOver30 by filtering the students array
 
 // Use the array map function to create an array of integers representing only
